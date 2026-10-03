@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_2" data-name="Layer 2" viewBox="0 0 129.47 8.15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#New_Gradient_Swatch_copy);
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: url(#New_Gradient_Swatch_copy-4);
+      }
+
+      .cls-3 {
+        fill: url(#New_Gradient_Swatch_copy-3);
+      }
+
+      .cls-4 {
+        fill: url(#New_Gradient_Swatch_copy-2);
+      }
+    </style>
+    <linearGradient id="New_Gradient_Swatch_copy" data-name="New Gradient Swatch copy" x1="-146.2" y1="4.07" x2="296.76" y2="4.07" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#780000"></stop>
+      <stop offset="1" stop-color="#f52200"></stop>
+    </linearGradient>
+    <linearGradient id="New_Gradient_Swatch_copy-2" data-name="New Gradient Swatch copy" x1="-146.2" y1="4.07" x2="296.76" y2="4.07" xlink:href="#New_Gradient_Swatch_copy"></linearGradient>
+    <linearGradient id="New_Gradient_Swatch_copy-3" data-name="New Gradient Swatch copy" x1="-146.2" y1="4.07" x2="296.76" y2="4.07" xlink:href="#New_Gradient_Swatch_copy"></linearGradient>
+    <linearGradient id="New_Gradient_Swatch_copy-4" data-name="New Gradient Swatch copy" x1="-146.2" y1="4.05" x2="296.76" y2="4.05" xlink:href="#New_Gradient_Swatch_copy"></linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-1" d="M73.06,4.07l3.49-3.23h45.86v-.85h-46.2l-3.78,3.5-3.78-3.5h-8.8l-3.78,3.5-3.78-3.5H6.08v.85h45.86l3.49,3.23-3.49,3.23H6.08v.85h46.19l3.78-3.5,3.78,3.5h8.8l3.78-3.5,3.78,3.5h46.2v-.85h-45.86l-3.49-3.23ZM68.32,7.3h-8.14l-3.49-3.23,3.49-3.23h8.14l3.49,3.23-3.49,3.23Z"></path>
+      <rect class="cls-4" x="76.39" y="3.65" width="53.09" height=".85"></rect>
+      <rect class="cls-3" y="3.65" width="52.11" height=".85"></rect>
+      <path class="cls-2" d="M64.25,2.97c-.8,0-1.45.48-1.45,1.08s.65,1.08,1.45,1.08,1.45-.48,1.45-1.08-.65-1.08-1.45-1.08Z"></path>
+    </g>
+  </g>
+</svg>
