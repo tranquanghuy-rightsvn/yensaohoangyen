@@ -635,3 +635,21 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 @media (min-width:2800px){html{zoom:1.45}}
 @media (min-width:3200px){html{zoom:1.65}}
 @media (min-width:3600px){html{zoom:1.85}}
+
+/* Chim yến bay vào lần đầu: từ góc phải-trên chéo 45° xuống vị trí, rồi mới nhấp nhô */
+.deco-bird{--fly:300px}
+.js-fly .deco-bird{opacity:0;animation:none}
+.js-fly .deco-bird.flown{opacity:.32;animation:birdIn 1.8s cubic-bezier(.22,.8,.25,1) both,birdFloat 6s ease-in-out 1.8s infinite}
+@keyframes birdIn{
+  0%{opacity:0;transform:translate(var(--fly),calc(var(--fly) * -1)) scaleX(-1) rotate(-22deg)}
+  25%{opacity:.32}
+  80%{transform:translate(-6px,6px) scaleX(-1) rotate(-4deg)}
+  100%{opacity:.32;transform:translate(0,0) scaleX(-1) rotate(-6deg)}}
+@media (max-width:991px){.deco-bird{--fly:200px}}
+@media (max-width:640px){.deco-bird{--fly:140px}.js-fly .deco-bird.flown{opacity:.28}}
+@media (prefers-reduced-motion:reduce){.js-fly .deco-bird{opacity:.32;animation:none}}
+
+/* Zalo: dùng logo Zalo (ảnh) bo tròn như web100 */
+.fab .zalo{background:#fff url(../images/zalo.webp) center/cover no-repeat;font-size:0}
+.zalo-ic{width:20px;height:20px;border-radius:50%;flex-shrink:0;background:#fff}
+.mbar .zalo-ic{width:22px;height:22px}

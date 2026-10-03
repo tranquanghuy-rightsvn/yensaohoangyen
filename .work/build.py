@@ -2,7 +2,7 @@
 """Sinh hoangyen/index.html từ data.py (chạy: python3 .work/build.py)."""
 import os, re, sys, html
 W = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(W)
+ROOT = os.path.join(os.path.dirname(W), 'html')  # trang web nằm trong hoangyen/html/
 sys.path.insert(0, W)
 from data import TABS, SPECIAL, GIFTS, CUSTOMERS, CERTS, POSTS
 
@@ -112,7 +112,7 @@ header = f'''<div class="topbar"><div class="container">
 <div class="drawer" id="drawer" aria-hidden="true"><div class="drawer-bg" data-drawer-close></div><div class="drawer-panel">
 <div class="drawer-head"><img src="images/logo.png" alt="Hoàng Yến" width="52" height="52"><button type="button" data-drawer-close aria-label="Đóng">&times;</button></div>
 <nav aria-label="Menu di động"><a href="index.html">Trang chủ</a><a href="#">Về Hoàng Yến</a><details open><summary>Cửa hàng</summary>{drawer_tiles()}</details><a href="#qua-bieu">Quà biếu Tết</a><a href="#">Vùng nguyên liệu</a><a href="#tin-tuc">Tin tức</a><a href="#lien-he">Liên hệ</a></nav>
-<div class="drawer-foot"><a class="btn btn-red" href="tel:0938699797">{ic('phone')}0938.699.797</a><a class="btn btn-line" href="https://zalo.me/0938699797">Chat Zalo</a></div>
+<div class="drawer-foot"><a class="btn btn-red" href="tel:0938699797">{ic('phone')}0938.699.797</a><a class="btn btn-line" href="https://zalo.me/0938699797"><img class="zalo-ic" src="images/zalo.webp" alt="" width="20" height="20">Chat Zalo</a></div>
 </div></div>'''
 
 # ---------- Hero ----------
@@ -252,7 +252,7 @@ consult = f'''<section class="sec bg-ivory" id="lien-he" style="padding-bottom:0
 <p>Chuyên viên Hoàng Yến tư vấn loại yến, liều dùng và hộp quà phù hợp ngân sách – hoàn toàn miễn phí.</p></div>
 <div class="consult-bowl" aria-hidden="true"><img src="images/deco-dia.webp" alt="" width="341" height="400" loading="lazy"></div>
 <div class="consult-actions"><a class="btn btn-red" href="tel:0938699797">{ic('phone')}Gọi 0938.699.797<small>8h – 21h hằng ngày</small></a>
-<a class="btn btn-gold" href="https://zalo.me/0938699797">{ic('chat')}Chat Zalo<small>Phản hồi trong 5 phút</small></a>
+<a class="btn btn-gold" href="https://zalo.me/0938699797"><img class="zalo-ic" src="images/zalo.webp" alt="" width="20" height="20">Chat Zalo<small>Phản hồi trong 5 phút</small></a>
 <a class="btn btn-line" href="https://m.me/111315987862501">{ic('chat')}Nhắn Messenger</a></div>
 </div></div></section>'''
 
@@ -271,8 +271,8 @@ footer = f'''<footer class="footer">
 </div>
 <div class="copy"><span>© 2021 – 2027 Yến Sào Hoàng Yến · Công ty Cổ phần Yến Sào Hoàng Yến</span><span>Yến Tiến Vua – Trao trọn tâm ý</span></div></div>
 </footer>
-<div class="fab"><a class="zalo" href="https://zalo.me/0938699797" aria-label="Chat Zalo">Zalo</a><a class="call" href="tel:0938699797" aria-label="Gọi hotline">{ic('phone')}</a><button class="top" type="button" aria-label="Lên đầu trang" data-top>{ic('up')}</button></div>
-<nav class="mbar" aria-label="Thanh tác vụ"><a href="index.html">{ic('home')}Trang chủ</a><a href="#danh-muc">{ic('grid')}Danh mục</a><a class="main" href="tel:0938699797"><span class="ic">{ic('phone')}</span><em>Gọi ngay</em></a><a href="https://zalo.me/0938699797">{ic('chat')}Zalo</a><a href="#">{ic('cart')}Giỏ hàng<span class="cart-count" data-cart-count>0</span></a></nav>
+<div class="fab"><a class="zalo" href="https://zalo.me/0938699797" target="_blank" rel="noopener" aria-label="Chat qua Zalo"></a><a class="call" href="tel:0938699797" aria-label="Gọi hotline">{ic('phone')}</a><button class="top" type="button" aria-label="Lên đầu trang" data-top>{ic('up')}</button></div>
+<nav class="mbar" aria-label="Thanh tác vụ"><a href="index.html">{ic('home')}Trang chủ</a><a href="#danh-muc">{ic('grid')}Danh mục</a><a class="main" href="tel:0938699797"><span class="ic">{ic('phone')}</span><em>Gọi ngay</em></a><a href="https://zalo.me/0938699797"><img class="zalo-ic" src="images/zalo.webp" alt="" width="20" height="20">Zalo</a><a href="#">{ic('cart')}Giỏ hàng<span class="cart-count" data-cart-count>0</span></a></nav>
 <div class="toast" role="status" aria-live="polite">{ic('check')}<span data-toast-text>Đã thêm vào giỏ</span></div>'''
 
 page = f'''<!doctype html>

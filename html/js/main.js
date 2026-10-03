@@ -51,6 +51,16 @@
     if (!reduce && n > 1) setInterval(function () { if (!paused && !document.hidden) go(cur() + 1); }, 5000);
   });
 
+  // Chim yến deco: bay vào khi Danh mục sản phẩm xuất hiện lần đầu
+  var bird = $('.deco-bird');
+  if (bird && 'IntersectionObserver' in window && !reduce) {
+    document.documentElement.classList.add('js-fly');
+    var bio = new IntersectionObserver(function (es) {
+      if (es[0].isIntersecting) { bird.classList.add('flown'); bio.disconnect(); }
+    }, { threshold: 0.25 });
+    bio.observe(bird.closest('section'));
+  }
+
   // Tabs sản phẩm
   $$('.tab').forEach(function (t) {
     t.addEventListener('click', function () {
